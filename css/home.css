@@ -1,0 +1,94 @@
+body{
+    height: 200vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+}
+
+.banner {
+    background: url('../images/banner-background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+.custom-nav{
+    margin-bottom: 0;
+}
+.bottom-shop{
+    padding-left: 15px;
+}
+.bottom-shop .btn-style:hover{
+    background: rgb(21, 21, 21);
+}
+.bottom-shop .btn-style{
+    background: rgb(241, 52, 241);
+    border-radius: 5px;
+    /* font-size: 1.1rem; */
+    color: white;
+    font-family: Arial;
+    text-transform: uppercase;
+}
+.banner-info h3{
+    background: none;
+    font-size: 2rem;
+}
+.banner-info h3, p{
+    /* color: rgb(246, 33, 147); */
+    color: #0674c9;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+    margin-left: 150px;
+}
+.banner-info{
+    padding-left: 54px;
+    padding-bottom: 65px;
+}
+
+.banner-ads{
+    background-image: url('../images/nike-ads.jpeg');
+    /* background-repeat: no-repeat; */
+    /* background-size: 100%; */
+    height: 32vh;
+    margin: 0 auto;
+    /* margin-top: 10px; */
+    display: block; 
+    text-align: center;
+}
+.container{
+    margin: 0 auto;
+}
+.table-card{
+    margin-top: 180px;
+}
+
+/* navsidebar */
+
+.sidebar li .submenu{ 
+	list-style: none; 
+	margin: 0; 
+	padding: 0; 
+	padding-left: 1rem; 
+	padding-right: 1rem;
+}
+.sidebar .nav-link {
+    font-weight: 500;
+    color: var(--bs-dark);
+}
+.sidebar .nav-link:hover {
+    color: var(--bs-primary);
+}
+.custom-table th{
+   text-align: center;
+}
+.card{
+    margin-top: 40px;
+}
+.home-product{
+    padding: 30px;
+}
+.custom-table tr{
+    height: 10vh;
+}
