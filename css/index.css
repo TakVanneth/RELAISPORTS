@@ -58,7 +58,7 @@ form button{
     width: 50px;
 }
 .custom-nav{
-    height: 10vh;
+    height: 9vh;
     margin-bottom: 25px;
 }
 .custom-nav ul{ 
@@ -266,17 +266,26 @@ form button{
     display: none;
 }
 
-.home-ads{
-    background-image: url('../images/nike-ads.jpeg');
-    height: 32vh;
-    margin: 0 auto;
-    /* margin-top: 10px; */
-    display: block; 
-    text-align: center;
-}
 
 .menu-nike{
     min-width: 100%;
     font-size: 1.7rem;
     margin-bottom: 40px;
+}
+
+/* Custom styles for product cards and carousel */
+.product-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+}
+
+.carousel {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.carousel-inner {
+    display: inline-flex;
 }
