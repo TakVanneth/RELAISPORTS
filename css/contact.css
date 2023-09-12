@@ -80,3 +80,7 @@ border: 2px solid #555;
 .cus-footer ul li a{
     text-decoration: none;
 }
+
+.box-search{
+    height: 38px;
+}
