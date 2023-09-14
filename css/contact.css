@@ -13,6 +13,7 @@ body{
     left: 155px;
     top: 171px;
     border-radius: 20px;
+    z-index: 2;
 }
 .first_col h1{
     padding-top: 20px;
@@ -30,7 +31,7 @@ body{
     padding-bottom: 100px !important;
     background-color: #c1b688;
     border-radius: 20px;
-
+    z-index: 3;
 }
 
 .btn-primary {
@@ -44,7 +45,7 @@ body{
 }
 
 .form-control {
-    height: 52px;
+    /* height: 52px; */
     width: 150%;
     background: #fff;
     font-size: 14px;
@@ -83,4 +84,7 @@ border: 2px solid #555;
 
 .search-box{
     height: 38px;
+}
+.sec_col{
+    z-index: 1;
 }
