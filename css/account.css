@@ -37300,3 +37300,31 @@ background-color: #ededed ;
 .card-icon img{
 width: 70px;
 }
+
+/* header */
+.cus-header{
+  background-color: rgb(240, 240, 240) ;
+  height: 4vh;
+}
+.cus-header ul{
+  display: flex;
+  list-style: none;
+  justify-content: right;
+  padding-right: 40px;
+  align-items: center;
+}
+.cus-header ul li{
+  padding-right: 20px;
+  margin-top: 3px;
+  background-color: transparent;
+}
+.cus-header ul li a{
+  color: black;
+  text-decoration: none;
+}
+.cus-header .logo-header img{
+  max-width: 50%;
+}
+.cus-header ul .logo-header{
+  padding-right: 970px;
+}
