@@ -1,5 +1,7 @@
 @import url('footer.css');
-
+body{
+    background-color:  rgb(240, 240, 240);
+}
 .nav-menu {
     margin-left: 65px;
     text-transform: uppercase;
@@ -319,3 +321,13 @@ form button{
 .cus-header ul .logo-header{
     padding-right: 970px;
 }
+#btn-back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    /* border: none; */
+    }
+
+
+
