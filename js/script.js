@@ -31,3 +31,10 @@ function backToTop() {
 document.body.scrollTop = 0;
 document.documentElement.scrollTop = 0;
 }
+
+function back(){
+  history.back();
+}
+
+  var backToShopLink = document.getElementById('backToShopLink');
+  backToShopLink.addEventListener("click", back);

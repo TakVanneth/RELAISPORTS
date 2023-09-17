@@ -323,7 +323,7 @@ form button{
 }
 #btn-back-to-top {
     position: fixed;
-    bottom: 30px;
+    bottom: 40px;
     right: 30px;
     display: none;
     /* border: none; */

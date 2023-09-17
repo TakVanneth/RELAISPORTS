@@ -1,0 +1,23 @@
+.box-payment-card{
+    min-width: 170%;
+}
+.span{
+    display: block;
+}
+.ps-2{
+    margin-top: 4px;
+}
+
+.text-primary svg{
+    margin-bottom: 4px;
+    margin-right: 4px;
+    height: 14px;
+    width: 14px;
+}
+.cus-footer ul li a{
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
