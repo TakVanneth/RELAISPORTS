@@ -38,3 +38,8 @@ function back(){
 
   var backToShopLink = document.getElementById('backToShopLink');
   backToShopLink.addEventListener("click", back);
+
+var showcard = document.getElementById('showcard');
+
+showcard.addEventListener('click', showAlert)
+

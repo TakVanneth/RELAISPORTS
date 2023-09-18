@@ -590,3 +590,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
       margin-bottom: 10px; } }
   
   /*# sourceMappingURL=style.css.map */
+
+.form-group svg{
+  margin-bottom: 5px;
+}
