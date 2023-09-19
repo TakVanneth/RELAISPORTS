@@ -197,13 +197,77 @@ closeModal10Button.addEventListener('click', closeModal10);
 // end pop up 10
 
 
+// pop up alert1
+function alert1() {
+    var modal_alert1 = document.getElementById('imageModal_alert1');
+    modal_alert1.style.display = 'block';
+}
+
+function closeModal_alert1() {
+    var modal_alert1 = document.getElementById('imageModal_alert1');
+    modal_alert1.style.display = 'none';
+}
+
+var showDetail_alert1= document.getElementById('alert1');
+showDetail_alert1.addEventListener('click', alert1);
+
+var closeModal_alert1Button = document.getElementById('closeModal_alert1');
+closeModal_alert1Button.addEventListener('click', closeModal_alert1);
+// end pop up alert1
 
 
+// pop up alert2
+function alert2() {
+    var modal_alert2 = document.getElementById('imageModal_alert2');
+    modal_alert2.style.display = 'block';
+}
 
-// 
+function closeModal_alert2() {
+    var modal_alert2 = document.getElementById('imageModal_alert2');
+    modal_alert2.style.display = 'none';
+}
 
-var link = document.getElementById('myLink');
+var showDetail_alert2= document.getElementById('alert2');
+showDetail_alert2.addEventListener('click', alert2);
 
-link.addEventListener('click', function(){
-    window.location.href="about.html";
-});
+var closeModal_alert2Button = document.getElementById('closeModal_alert2');
+closeModal_alert2Button.addEventListener('click', closeModal_alert2);
+// end pop up alert2
+
+
+// pop up alert3
+function alert3() {
+    var modal_alert3 = document.getElementById('imageModal_alert3');
+    modal_alert3.style.display = 'block';
+}
+
+function closeModal_alert3() {
+    var modal_alert3 = document.getElementById('imageModal_alert3');
+    modal_alert3.style.display = 'none';
+}
+
+var showDetail_alert3= document.getElementById('alert3');
+showDetail_alert3.addEventListener('click', alert3);
+
+var closeModal_alert3Button = document.getElementById('closeModal_alert3');
+closeModal_alert3Button.addEventListener('click', closeModal_alert3);
+// end pop up alert3
+
+
+// pop up alert4
+function alert4() {
+    var modal_alert4 = document.getElementById('imageModal_alert4');
+    modal_alert4.style.display = 'block';
+}
+
+function closeModal_alert4() {
+    var modal_alert4 = document.getElementById('imageModal_alert4');
+    modal_alert4.style.display = 'none';
+}
+
+var showDetail_alert4= document.getElementById('alert4');
+showDetail_alert4.addEventListener('click', alert4);
+
+var closeModal_alert4Button = document.getElementById('closeModal_alert4');
+closeModal_alert4Button.addEventListener('click', closeModal_alert4);
+// end pop up alert4
