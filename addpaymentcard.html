@@ -70,11 +70,24 @@
             <button class="btn d-flex mx-auto" type="button"><b>Add card</b></button>
         </form>
     </div>
+    <script src="js/script.js"></script>
     <script>
         var btn = document.getElementsByClassName('btn')[0];
         btn.addEventListener("click", function() {
 
         window.location.href = "account.html";
+    });
+    $(document).ready(function() {
+        // Retrieve the cardData from localStorage
+        const cardData = JSON.parse(localStorage.getItem("cardData"));
+
+        if (cardData && Array.isArray(cardData)) {
+            const itemCount = cardData.length;
+            $("#notification").text(itemCount);
+        } else {
+            console.log("Card data not found or is not an array.");
+        }
+
     });
     </script>
 </body>

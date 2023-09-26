@@ -1,4 +1,8 @@
-
+// Check if the user is logged in (i.e., 'user' item exists in localStorage)
+if (!localStorage.getItem('user')) {
+  // If not logged in, redirect to the login page
+  window.location.href = 'login.html';
+}
 function showAlert() {
   var alert_card = document.getElementsByClassName('alert-card').textcontact;
 

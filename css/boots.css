@@ -180,4 +180,10 @@ padding-left: 90vw;
         min-height: 100%;
         border: none;
     }
-    
+
+
+.productprice{
+    float: right;
+    margin-top: -43px;
+    margin-right: 200px;
+}

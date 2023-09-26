@@ -68,14 +68,15 @@ form button{
 .custom-nav .icon{
    padding: 20px;
    margin-top: -23px;
-   margin-left: 19px;
+   margin-left: 20px;
 }
 .custom-nav .icon svg{
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
 }
 .custom-nav ul .bag{
     padding-top: 15px;
+    margin-right: 10px;
 }
 .form-control:focus {
     box-shadow: none;

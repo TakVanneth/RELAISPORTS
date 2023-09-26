@@ -1,5 +1,4 @@
 
-
 // pop up 1
 function showModal1() {
     var modal1 = document.getElementById('imageModal1');
@@ -271,3 +270,48 @@ showDetail_alert4.addEventListener('click', alert4);
 var closeModal_alert4Button = document.getElementById('closeModal_alert4');
 closeModal_alert4Button.addEventListener('click', closeModal_alert4);
 // end pop up alert4
+
+
+
+
+$(document).ready(function() {
+    $(".btn-buy").click(function() {
+       // Retrieve data from the modal
+       const cardTitle = $(this).closest('.modal-content').find('.card-title').text();
+       const productprice = $(this).closest('.modal-content').find('.productprice').text();
+       // Find the selected radio button for size
+        const selectedSize1 = $(this).closest('.modal-content').find('input[name="options"]:checked').next('label').text();
+        const selectedSize2 = $(this).closest('.modal-content').find('input[name="pop2_options"]:checked').next('label').text();
+        const selectedSize3 = $(this).closest('.modal-content').find('input[name="pop3_option"]:checked').next('label').text();
+        const selectedSize4 = $(this).closest('.modal-content').find('input[name="pop4_option"]:checked').next('label').text();
+        const selectedSize5 = $(this).closest('.modal-content').find('input[name="pop5_option"]:checked').next('label').text();
+        const selectedSize6 = $(this).closest('.modal-content').find('input[name="pop6_option"]:checked').next('label').text();
+        const selectedSize7 = $(this).closest('.modal-content').find('input[name="pop7_option"]:checked').next('label').text();
+        const selectedSize8 = $(this).closest('.modal-content').find('input[name="pop8_option"]:checked').next('label').text();
+        const selectedSize9 = $(this).closest('.modal-content').find('input[name="pop9_option"]:checked').next('label').text();
+        const selectedSize10 = $(this).closest('.modal-content').find('input[name="pop10_option"]:checked').next('label').text();
+       // Find the img source within the card content
+        const imageUrl = $(this).closest('.modal-content').find('.img-fluid').attr('src');
+
+       // Create a new card object
+       const cardObject = {
+          cardTitle: cardTitle,
+          productprice: productprice,
+          optionSize: [selectedSize1 ,selectedSize2, selectedSize3, selectedSize4, selectedSize5, selectedSize6, selectedSize7, selectedSize8, selectedSize9, selectedSize10],
+          imageUrl: imageUrl
+       };
+
+
+       // Retrieve existing cardData from localStorage or initialize an empty array
+       let cardData = JSON.parse(localStorage.getItem("cardData")) || [];
+
+       // Add the new cardObject to the cardData array
+       cardData.push(cardObject);
+
+       // Store the updated cardData array in localStorage
+       localStorage.setItem("cardData", JSON.stringify(cardData));
+
+    //    alert("Card data saved in localStorage!");
+
+    });
+ });

@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/boots.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/cart.js"></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Kurale&family=Norican&display=swap');
     </style>
@@ -36,7 +39,7 @@
         </li>
         <li>|</li>
         <li>
-          <a href="login.html">
+          <a href="account.html">
             <img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16"><path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/><path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/></svg>' alt="">
           </a>
         </li>        
@@ -64,41 +67,30 @@
                     <div class="row my-4">
                     <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                       <div class="list-group list-group-flush">
-                        <!-- <a href="#" class="list-group-item list-group-item-action">Item 1</a> -->
                         <a href="#nike" class="list-group-item list-group-item-action">Nike</a>
-                        <!-- <a href="" class="list-group-item list-group-item-action"></a> -->
-                        <!-- <a href="" class="list-group-item list-group-item-action"></a> -->
                       </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                       <div class="list-group list-group-flush">
                         <a href="#adidas" class="list-group-item list-group-item-action">Adidas</a>
-                        <!-- <a href="" class="list-group-item list-group-item-action"></a> -->
-                        <!-- <a href="" class="list-group-item list-group-item-action">Provident dolor</a> -->
                       </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
                       <div class="list-group list-group-flush">
                         <a href="#puma" class="list-group-item list-group-item-action">Puma</a>
-                        <!-- <a href="" class="list-group-item list-group-item-action">Praesentium</a>
-                        <a href="" class="list-group-item list-group-item-action">Laboriosam</a> -->
                       </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
                       <div class="list-group list-group-flush">
                         <a href="#mizuno" class="list-group-item list-group-item-action">Mizuno</a>
-                        <!-- <a href="" class="list-group-item list-group-item-action">Sunt doloribus</a>
-                        <a href="" class="list-group-item list-group-item-action">Cum dolores</a> -->
                       </div>
                     </div>
                     <div class="col-md-2 col-lg-3 mb-3 mb-md-0">
                       <div class="list-group list-group-flush">
-                        <!-- <a href="" class="list-group-item list-group-item-action"></a> -->
                       </div>
                     </div>
                     <div class="col-md-2 col-lg-3 mb-3 mb-md-0">
                       <div class="list-group list-group-flush">
-                        <!-- <a href="" class="list-group-item list-group-item-action"></a> -->
                       </div>
                     </div>
                   </div>
@@ -122,7 +114,6 @@
                       <div class="row my-4">
                       <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                         <div class="list-group list-group-flush">
-                            <!-- <a href="#" class="list-group-item list-group-item-action">Item 1</a> -->
                             <a href="boots.html" class="list-group-item list-group-item-action">Boots</a>
                             <a href="" class="list-group-item list-group-item-action">Ball</a>
                             <a href="" class="list-group-item list-group-item-action">gk gloves</a>
@@ -198,9 +189,9 @@
             </li>
             <li class="nav-item icon bag">
               <a href="cart.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
-                  <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                </svg><a style="color: red; background: none;" id="notification"></a>
               </a>
             </li>
           </ul>
@@ -490,7 +481,7 @@
             <div class="card .hover-zoom" style="width: 14rem;">
               <img src="images/Children's shoes adidas Nemeziz Messi .1 FG J.jpg" class="card-img-top" alt="...">
               <div class="card-body title-boby-card">
-                <p class="card-text">Adidas Nemeziz</p>
+                <p class="card-text" id="productname">Adidas Nemeziz</p>
                 <div class="product-price">
                   <p class="card-text off">$81.76</p>
                   <p class="card-text full-price"></p>
@@ -553,7 +544,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">Children's shoes adidas Nemeziz Messi .1 FG J<code class="text-success">$81.76</code></h5>
+                                <h5 class="card-title">Adidas Nemeziz Messi .1 FG J</h5><code class="text-success productprice">81.76</code>
                                 <p class="card-text"><small class="text-body-secondary">In stock</small></p>
                                 <p class="card-text">When your opponents think they can stop you, you let your technique speak. Hook, bridge, roll... Show off your agility with the adidas Nemeziz Messi.1 junior football boot. Emblazoned with Messi logos, it features a laceless Tension Tape upper that wraps around your foot to provide the perfect balance of freedom and support. The split outsole is slightly flexible to give you full freedom of movement on soft ground.</p>
                                 <div class="option-size">
@@ -571,10 +562,10 @@
                                 <hr/>
                                 <div class="row btn-pop-up-card">
                                   <div class="col-md-4">
-                                      <a href="payment.html"><button type="button" class="btn-block btn-lg btn-pop-up">Buy now</button></a>
+                                      <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Buy now</button></a>
                                   </div>
                                   <div class="col-md-4">
-                                      <a href="#"><button type="button" class="btn-block btn-lg btn-pop-up">Add to bag</button></a>
+                                      <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Add to bag</button></a>
                                   </div>
                                   <div class="col-md-2">
 
@@ -595,7 +586,7 @@
                 </div>
             </div>
         </div>
-          <!-- end product 2 -->
+          <!-- product 2 -->
           <div class="col-md-2 col-sm-6 col-12 cus-card-product" id="showDetail2"> 
             <!-- product 2-->
             <div class="card" style="width: 14rem;">
@@ -664,7 +655,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                              <h5 class="card-title">Puma Men's Future Z 1.2 FG/AG<code class="text-success">$169.95</code></h5>
+                              <h5 class="card-title">Puma Men's Future Z 1.2 FG/AG</h5><code class="text-success productprice">169.95</code>
                               <p class="card-text"><small class="text-body-secondary">In stock</small></p>
                                 <p class="card-text">PUMA Football Shoes have the clinical finish, precession DNA, equipped with a multi-dimensional Upper that gives impeccable ball control with good touch which is complemented with the high technology outsole which delivers rapid acceleration on any part of the ground staying true to our FAST ethos, also with cutting edge design & buzzing colors that enable you to perform, outshine the game.</p>
                                 <div class="option-size">
@@ -682,10 +673,10 @@
                                   <hr/>
                                   <div class="row btn-pop-up-card">
                                     <div class="col-md-4">
-                                        <a href="payment.html"><button type="button" class="btn-block btn-lg btn-pop-up">Buy now</button></a>
+                                        <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Buy now</button></a>
                                     </div>
                                     <div class="col-md-4">
-                                        <a href="#"><button type="button" class="btn-block btn-lg btn-pop-up">Add to bag</button></a>
+                                        <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Add to bag</button></a>
                                     </div>
                                     <div class="col-md-2">
   
@@ -779,10 +770,10 @@
                       </div>
                       <div class="col-md-8">
                           <div class="card-body">
-                            <h5 class="card-title">Nike Tiempo Legend VII SE FG Sergio Ramos<code class="text-success">$644</code></h5>
+                            <h5 class="card-title">Nike Tiempo Legend VII SE FG Sergio Ramos</h5><code class="text-success productprice">644</code>
                             <p class="card-text"><small class="text-body-secondary">In stock</small></p>
                               <p class="card-text">The Real Madrid captain is like the creation of a super video game player, an EA FIFA all-world defender or something along those lines. Spain's wonder boy has all the tools the great ones have. He is fast, he is strong. He scores goals for fun, lots of them! Ramos has admirers all around the world of football and it's no surprise Nike chose to make this beautiful Nike Tiempo Legend VII SE cleat to honor the main man of Madrid.</p>
-                              <div class="option-size">
+                              <div class="option-size" >
                                 <input type="radio" class="btn-check" name="pop3_option" id="pop3_option1" autocomplete="off" disabled>
                                 <label class="btn btn-secondary" for="pop3_option1">39</label>
                                 <input type="radio" class="btn-check" name="pop3_option" id="pop3_option2" autocomplete="off" checked>
@@ -797,10 +788,10 @@
                                 <hr/>
                                 <div class="row btn-pop-up-card">
                                   <div class="col-md-4">
-                                      <a href="payment.html"><button type="button" class="btn-block btn-lg btn-pop-up">Buy now</button></a>
+                                      <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Buy now</button></a>
                                   </div>
                                   <div class="col-md-4">
-                                      <a href="#"><button type="button" class="btn-block btn-lg btn-pop-up">Add to bag</button></a>
+                                      <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Add to bag</button></a>
                                   </div>
                                   <div class="col-md-2">
 
@@ -897,7 +888,7 @@
                           </div>
                           <div class="col-md-8">
                               <div class="card-body">
-                                <h5 class="card-title">Nike Mercurial Superfly VI Elite FG<code class="text-success">$159.99</code></h5>
+                                <h5 class="card-title">Nike Mercurial Superfly VI Elite FG</h5><code class="text-success productprice">159.99</code>
                                 <p class="card-text"><small class="text-body-secondary">In stock</small></p>
                                   <p class="card-text">Product description Nike Mercurial Superfly VI Elite FG Football Boots
                                     The Nike Mercurial Superfly 360 Elite Firm-Ground Soccer Cleat wraps your foot for a perfect fit and exceptional ball touch, while the forefoot plate provides explosive acceleration on the field.</p>
@@ -916,10 +907,10 @@
                                     <hr/>
                                     <div class="row btn-pop-up-card">
                                       <div class="col-md-4">
-                                          <a href="payment.html"><button type="button" class="btn-block btn-lg btn-pop-up">Buy now</button></a>
+                                          <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Buy now</button></a>
                                       </div>
                                       <div class="col-md-4">
-                                          <a href="#"><button type="button" class="btn-block btn-lg btn-pop-up">Add to bag</button></a>
+                                          <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Add to bag</button></a>
                                       </div>
                                       <div class="col-md-2">
     
@@ -1013,7 +1004,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                  <h5 class="card-title">Adidas X Speedflow Diamond Edge Pack<code class="text-success">$180.25</code></h5>
+                                  <h5 class="card-title">Adidas X Speedflow Diamond Edge Pack</h5><code class="text-success productprice">188.25</code>
                                   <p class="card-text"><small class="text-body-secondary">In stock</small></p>
                                     <p class="card-text">X Speedflow is a new chapter of speed from the Three Stripes to be worn by the world's fastest players including Mo Salah, Heung-Min Son, Karim Benzema and Vivianne Miedema. Back in 2020, adidas drilled down their focus to develop a boot that reflects fast football - naturally that boot had to be ultra light-weight.</p>
                                     <div class="option-size">
@@ -1031,10 +1022,10 @@
                                       <hr/>
                                       <div class="row btn-pop-up-card">
                                         <div class="col-md-4">
-                                            <a href="payment.html"><button type="button" class="btn-block btn-lg btn-pop-up">Buy now</button></a>
+                                            <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Buy now</button></a>
                                         </div>
                                         <div class="col-md-4">
-                                            <a href="#"><button type="button" class="btn-block btn-lg btn-pop-up">Add to bag</button></a>
+                                            <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Add to bag</button></a>
                                         </div>
                                         <div class="col-md-2">
       
@@ -1144,7 +1135,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                  <h5 class="card-title">Nike Mercurial Superfly VI Elite FG<code class="text-success">$159.99</code></h5>
+                                  <h5 class="card-title">Nike Mercurial Superfly VI Elite FG</h5><code class="text-success productprice">159.99</code>
                                   <p class="card-text"><small class="text-body-secondary">In stock</small></p>
                                     <p class="card-text">Product description Nike Mercurial Superfly VI Elite FG Football Boots
                                       The Nike Mercurial Superfly 360 Elite Firm-Ground Soccer Cleat wraps your foot for a perfect fit and exceptional ball touch, while the forefoot plate provides explosive acceleration on the field.</p>
@@ -1163,10 +1154,10 @@
                                       <hr/>
                                       <div class="row btn-pop-up-card">
                                         <div class="col-md-4">
-                                            <a href="payment.html"><button type="button" class="btn-block btn-lg btn-pop-up">Buy now</button></a>
+                                            <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Buy now</button></a>
                                         </div>
                                         <div class="col-md-4">
-                                            <a href="#"><button type="button" class="btn-block btn-lg btn-pop-up">Add to bag</button></a>
+                                            <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Add to bag</button></a>
                                         </div>
                                         <div class="col-md-2">
       
@@ -1256,7 +1247,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                  <h5 class="card-title">Nike Mercurial Superfly VI Elite FG<code class="text-success">$159.99</code></h5>
+                                  <h5 class="card-title">Nike Mercurial Superfly VI Elite FG</h5><code class="text-success productprice">999.99</code>
                                   <p class="card-text"><small class="text-body-secondary">In stock</small></p>
                                     <p class="card-text">Product description Nike Mercurial Superfly VI Elite FG Football Boots
                                       The Nike Mercurial Superfly 360 Elite Firm-Ground Soccer Cleat wraps your foot for a perfect fit and exceptional ball touch, while the forefoot plate provides explosive acceleration on the field.</p>
@@ -1275,10 +1266,10 @@
                                       <hr/>
                                       <div class="row btn-pop-up-card">
                                         <div class="col-md-4">
-                                            <a href="payment.html"><button type="button" class="btn-block btn-lg btn-pop-up">Buy now</button></a>
+                                            <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Buy now</button></a>
                                         </div>
                                         <div class="col-md-4">
-                                            <a href="#"><button type="button" class="btn-block btn-lg btn-pop-up">Add to bag</button></a>
+                                            <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Add to bag</button></a>
                                         </div>
                                         <div class="col-md-2">
       
@@ -1374,7 +1365,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                  <h5 class="card-title">Nike Mercurial Superfly VI Elite FG<code class="text-success">$159.99</code></h5>
+                                  <h5 class="card-title">Nike Mercurial Superfly VI Elite FG</h5><code class="text-success productprice">100</code>
                                   <p class="card-text"><small class="text-body-secondary">In stock</small></p>
                                     <p class="card-text">Product description Nike Mercurial Superfly VI Elite FG Football Boots
                                       The Nike Mercurial Superfly 360 Elite Firm-Ground Soccer Cleat wraps your foot for a perfect fit and exceptional ball touch, while the forefoot plate provides explosive acceleration on the field.</p>
@@ -1393,10 +1384,10 @@
                                       <hr/>
                                       <div class="row btn-pop-up-card">
                                         <div class="col-md-4">
-                                            <a href="payment.html"><button type="button" class="btn-block btn-lg btn-pop-up">Buy now</button></a>
+                                            <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Buy now</button></a>
                                         </div>
                                         <div class="col-md-4">
-                                            <a href="#"><button type="button" class="btn-block btn-lg btn-pop-up">Add to bag</button></a>
+                                            <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Add to bag</button></a>
                                         </div>
                                         <div class="col-md-2">
       
@@ -1489,7 +1480,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                  <h5 class="card-title">Nike Mercurial Superfly VI Elite FG<code class="text-success">$159.99</code></h5>
+                                  <h5 class="card-title">Nike Mercurial Superfly VI Elite FG</h5><code class="text-success productprice">300</code>
                                   <p class="card-text"><small class="text-body-secondary">In stock</small></p>
                                     <p class="card-text">Product description Nike Mercurial Superfly VI Elite FG Football Boots
                                       The Nike Mercurial Superfly 360 Elite Firm-Ground Soccer Cleat wraps your foot for a perfect fit and exceptional ball touch, while the forefoot plate provides explosive acceleration on the field.</p>
@@ -1508,10 +1499,10 @@
                                       <hr/>
                                       <div class="row btn-pop-up-card">
                                         <div class="col-md-4">
-                                            <a href="payment.html"><button type="button" class="btn-block btn-lg btn-pop-up">Buy now</button></a>
+                                            <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Buy now</button></a>
                                         </div>
                                         <div class="col-md-4">
-                                            <a href="#"><button type="button" class="btn-block btn-lg btn-pop-up">Add to bag</button></a>
+                                            <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Add to bag</button></a>
                                         </div>
                                         <div class="col-md-2">
       
@@ -1604,7 +1595,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                  <h5 class="card-title">Nike Mercurial Superfly VI Elite FG<code class="text-success">$159.99</code></h5>
+                                  <h5 class="card-title">Nike Mercurial Superfly VI Elite FG</h5><code class="text-success productprice">250</code>
                                   <p class="card-text"><small class="text-body-secondary">In stock</small></p>
                                     <p class="card-text">Product description Nike Mercurial Superfly VI Elite FG Football Boots
                                       The Nike Mercurial Superfly 360 Elite Firm-Ground Soccer Cleat wraps your foot for a perfect fit and exceptional ball touch, while the forefoot plate provides explosive acceleration on the field.</p>
@@ -1623,10 +1614,10 @@
                                       <hr/>
                                       <div class="row btn-pop-up-card">
                                         <div class="col-md-4">
-                                            <a href="payment.html"><button type="button" class="btn-block btn-lg btn-pop-up">Buy now</button></a>
+                                            <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Buy now</button></a>
                                         </div>
                                         <div class="col-md-4">
-                                            <a href="#"><button type="button" class="btn-block btn-lg btn-pop-up">Add to bag</button></a>
+                                            <a href=""><button type="button" class="btn-block btn-lg btn-pop-up btn-buy">Add to bag</button></a>
                                         </div>
                                         <div class="col-md-2">
       
@@ -5467,11 +5458,11 @@
     <!-- end new product Mizuno -->
 </section>
 
-<!-- <button type="button" id="btn-back-to-top" style="border: none; background: transparent;">
+<button type="button" id="btn-back-to-top" style="border: none; background: transparent;">
   <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
     <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
   </svg>
-</button> -->
+</button>
 <!-- Footer -->
 <footer class="bg-white cus-footer">
   <div class="container py-5">
@@ -5554,11 +5545,24 @@
 <!-- END Footer -->
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/boot.js"></script>
-
+<script>
+  $(document).ready(function() {
+    // Retrieve the cardData from localStorage
+    const cardData = JSON.parse(localStorage.getItem("cardData"));
+  
+    if (cardData && Array.isArray(cardData)) {
+      const itemCount = cardData.length;
+      $("#notification").text(itemCount);
+    } else {
+      // console.log("Card data not found or is not an array.");
+    }
+  
+  });
+    </script>
 </body>
 </html>
