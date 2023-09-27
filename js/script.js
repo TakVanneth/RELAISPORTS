@@ -46,4 +46,3 @@ function back(){
 var showcard = document.getElementById('showcard');
 
 showcard.addEventListener('click', showAlert)
-

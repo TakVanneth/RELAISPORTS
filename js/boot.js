@@ -271,7 +271,153 @@ var closeModal_alert4Button = document.getElementById('closeModal_alert4');
 closeModal_alert4Button.addEventListener('click', closeModal_alert4);
 // end pop up alert4
 
+// size pop 1
+// const priceMap = {
+//     'option1': '81.76',
+//     'option2': '200.00',
+//     'option3': '150.00'
+// };
 
+// // Get references to the radio buttons and product price element
+// const $optionRadios = $('[name="options"]');
+// const $productPrice = $('.productprice');
+
+// // Add event listener to update product price
+// $optionRadios.change(function () {
+//     const selectedOption = $optionRadios.filter(':checked').attr('id');
+//     $productPrice.text(priceMap[selectedOption]);
+// });
+// end size 1
+// // size pop 2
+// const priceMapPop2 = {
+//     'pop2_option1': '169.95',
+//     'pop2_option2': '200.00',
+//     'pop2_option3': '0.00', // Disabled options can have a price of 0
+//     'pop2_option4': '0.00',
+//     'pop2_option5': '250.00',
+// };
+
+// const $optionRadiosPop2 = $('[name="pop2_options"]');
+// const $productPricePop2 = $('#imageModal2 .productprice');
+
+// $optionRadiosPop2.change(function () {
+//     const selectedOptionPop2 = $optionRadiosPop2.filter(':checked').attr('id');
+//     $productPricePop2.text(priceMapPop2[selectedOptionPop2]);
+// });
+// // end size 2
+
+const popSizes = ['pop1', 'pop2', 'pop3', 'pop4', 'pop5', 'pop6', 'pop7', 'pop8', 'pop9', 'pop10'];
+
+// Loop through each "pop" size
+popSizes.forEach((popSize) => {
+    const priceMap = {};
+
+    if (popSize === 'pop1') {
+        priceMap['option1'] = '81.76';
+        priceMap['option2'] = '100.XX';
+        priceMap['option3'] = '98.9X';
+        priceMap['option4'] = '';
+        priceMap['option5'] = '';
+    
+        const $optionRadios = $('[name="options"]');
+        const $productPrice = $('.productprice');
+    
+        $('#option1').prop('checked', true);
+        $('#option4, #option5').prop('disabled', true);
+        
+        $('[name="options"]').change(function () {
+            const selectedOption = $('[name="options"]:checked').attr('id');
+            $('.productprice').text(priceMap[selectedOption]);
+        });
+    
+        $optionRadios.change(function () {
+            const selectedOption = $optionRadios.filter(':checked').attr('id');
+            $productPrice.text(priceMap[selectedOption]);
+        });
+    } else if (popSize === 'pop2') {
+        priceMap[`${popSize}_option1`] = '169.95';
+        priceMap[`${popSize}_option2`] = '200.XX';
+        priceMap[`${popSize}_option3`] = '';
+        priceMap[`${popSize}_option4`] = '';
+        priceMap[`${popSize}_option5`] = '100.XX';
+
+        $(`#${popSize}_option3, #${popSize}_option4`).prop('disabled', true);
+        $(`#${popSize}_option1`).prop('checked', true);
+
+    } else if (popSize === 'pop3') {
+        priceMap[`${popSize}_option1`] = '';
+        priceMap[`${popSize}_option2`] = '644';
+        priceMap[`${popSize}_option3`] = '';
+        priceMap[`${popSize}_option4`] = '';
+        priceMap[`${popSize}_option5`] = '770';
+        $(`#${popSize}_option1, #${popSize}_option3, #${popSize}_option4, #${popSize}_option5`).prop('disabled', true);
+        $(`#${popSize}_option2`).prop('checked', true);
+    } else if (popSize === 'pop4') {
+        priceMap[`${popSize}_option1`] = '';
+        priceMap[`${popSize}_option2`] = '';
+        priceMap[`${popSize}_option3`] = '159.99';
+        priceMap[`${popSize}_option4`] = '139.99';
+        priceMap[`${popSize}_option5`] = '';
+        $(`#${popSize}_option1, #${popSize}_option2, #${popSize}_option5`).prop('disabled', true);
+        $(`#${popSize}_option3`).prop('checked', true);
+    } else if (popSize === 'pop5') {
+        priceMap[`${popSize}_option1`] = '';
+        priceMap[`${popSize}_option2`] = '180.25';
+        priceMap[`${popSize}_option3`] = '149.99';
+        priceMap[`${popSize}_option4`] = '130.XX';
+        priceMap[`${popSize}_option5`] = '';
+        $(`#${popSize}_option1, #${popSize}_option5`).prop('disabled', true);
+        $(`#${popSize}_option2`).prop('checked', true);
+    } else if (popSize === 'pop6') {
+        priceMap[`${popSize}_option1`] = '';
+        priceMap[`${popSize}_option2`] = '188.25';
+        priceMap[`${popSize}_option3`] = '119.99';
+        priceMap[`${popSize}_option4`] = '';
+        priceMap[`${popSize}_option5`] = '90.XX';
+        $(`#${popSize}_option1, #${popSize}_option4`).prop('disabled', true);
+        $(`#${popSize}_option2`).prop('checked', true);
+    } else if (popSize === 'pop7') {
+        priceMap[`${popSize}_option1`] = '130.XX';
+        priceMap[`${popSize}_option2`] = '188.25';
+        priceMap[`${popSize}_option3`] = '119.99';
+        priceMap[`${popSize}_option4`] = '99.99';
+        priceMap[`${popSize}_option5`] = '100.XX';
+        $(`#${popSize}_option1`).prop('checked', true);
+    } else if (popSize === 'pop8') {
+        priceMap[`${popSize}_option1`] = '100.XX';
+        priceMap[`${popSize}_option2`] = '79.9X';
+        priceMap[`${popSize}_option3`] = '99.9X';
+        priceMap[`${popSize}_option4`] = '';
+        priceMap[`${popSize}_option5`] = '';
+        $(`#${popSize}_option4, #${popSize}_option5`).prop('disabled', true);
+        $(`#${popSize}_option1`).prop('checked', true);
+    } else if (popSize === 'pop9') {
+        priceMap[`${popSize}_option1`] = '400.XX';
+        priceMap[`${popSize}_option2`] = '88.25';
+        priceMap[`${popSize}_option3`] = '169.99';
+        priceMap[`${popSize}_option4`] = '100.XX';
+        priceMap[`${popSize}_option5`] = '140.XX';
+        $(`#${popSize}_option1`).prop('checked', true);
+        // $(`#${popSize}_option4, #${popSize}_option1`).prop('disabled', true);
+    } else if (popSize === 'pop10') {
+        priceMap[`${popSize}_option1`] = '190.XX';
+        priceMap[`${popSize}_option2`] = '100.XX';
+        priceMap[`${popSize}_option3`] = '119.99';
+        priceMap[`${popSize}_option4`] = '200.XX';
+        priceMap[`${popSize}_option5`] = '300.XX';
+        $(`#${popSize}_option1`).prop('checked', true);
+        // $(`#${popSize}_option4, #${popSize}_option1`).prop('disabled', true);
+    }
+    // Add more conditions for other "pop" sizes if needed
+
+    const $optionRadios = $(`[name="${popSize}_option"]`);
+    const $productPrice = $(`#imageModal${popSize.replace('pop', '')} .productprice`);
+
+    $optionRadios.change(function () {
+        const selectedOption = $optionRadios.filter(':checked').attr('id');
+        $productPrice.text(priceMap[selectedOption]);
+    });
+});
 
 
 $(document).ready(function() {
@@ -281,7 +427,7 @@ $(document).ready(function() {
        const productprice = $(this).closest('.modal-content').find('.productprice').text();
        // Find the selected radio button for size
         const selectedSize1 = $(this).closest('.modal-content').find('input[name="options"]:checked').next('label').text();
-        const selectedSize2 = $(this).closest('.modal-content').find('input[name="pop2_options"]:checked').next('label').text();
+        const selectedSize2 = $(this).closest('.modal-content').find('input[name="pop2_option"]:checked').next('label').text();
         const selectedSize3 = $(this).closest('.modal-content').find('input[name="pop3_option"]:checked').next('label').text();
         const selectedSize4 = $(this).closest('.modal-content').find('input[name="pop4_option"]:checked').next('label').text();
         const selectedSize5 = $(this).closest('.modal-content').find('input[name="pop5_option"]:checked').next('label').text();
@@ -302,7 +448,6 @@ $(document).ready(function() {
        };
 
 
-       // Retrieve existing cardData from localStorage or initialize an empty array
        let cardData = JSON.parse(localStorage.getItem("cardData")) || [];
 
        // Add the new cardObject to the cardData array

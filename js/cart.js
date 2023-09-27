@@ -3,7 +3,7 @@ if (!localStorage.getItem('user')) window.location.href = 'login.html';
 $(document).ready(function() {
   function generateQuantityOptions(selectedQuantity = 1) {
     let optionsHtml = "";
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 100; i++) {
       const selected = i === selectedQuantity ? 'selected' : '';
       optionsHtml += `<option value="${i}" ${selected}>${i}</option>`;
     }
@@ -278,4 +278,3 @@ $(document).ready(function() {
   });
 
 });
-
