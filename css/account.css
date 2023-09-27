@@ -1176,11 +1176,7 @@ select:focus {
   font-weight: 700;
 }
 
-/*=====  Typography Style =====*/
-/*==================================================================
-                           05. Buttons css
-==================================================================*/
-/*===== All Button Common Style =====*/
+
 .main-btn {
   display: inline-block;
   text-align: center;

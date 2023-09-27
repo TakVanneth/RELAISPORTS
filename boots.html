@@ -5550,25 +5550,5 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/boot.js"></script>
-<script>
-  $(document).ready(function() {
-    // Retrieve the cardData from localStorage
-    const cardData = JSON.parse(localStorage.getItem("cardData"));
-  
-    if (cardData && Array.isArray(cardData)) {
-      const itemCount = cardData.length;
-      $("#notification").text(itemCount);
-    } else {
-      // console.log("Card data not found or is not an array.");
-    }
-    
-    // var a = cardData.length;
-
-    // alert(a);
-
-    // $("#notification").text(a);
-  
-  });
-    </script>
 </body>
 </html>

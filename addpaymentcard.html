@@ -78,16 +78,18 @@
         window.location.href = "account.html";
     });
     $(document).ready(function() {
-        // Retrieve the cardData from localStorage
         const cardData = JSON.parse(localStorage.getItem("cardData"));
 
         if (cardData && Array.isArray(cardData)) {
             const itemCount = cardData.length;
+            if (itemCount > 0) {
             $("#notification").text(itemCount);
+            } else {
+            $("#notification").hide();
+            }
         } else {
             console.log("Card data not found or is not an array.");
         }
-
     });
     </script>
 </body>

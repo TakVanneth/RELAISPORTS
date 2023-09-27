@@ -333,17 +333,19 @@ Football is more than just a sport; it's a way of life for millions of people ar
   <script src="bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
   <script>
-    $(document).ready(function() {
-  // Retrieve the cardData from localStorage
+$(document).ready(function() {
   const cardData = JSON.parse(localStorage.getItem("cardData"));
 
   if (cardData && Array.isArray(cardData)) {
     const itemCount = cardData.length;
-    $("#notification").text(itemCount);
+    if (itemCount > 0) {
+      $("#notification").text(itemCount);
+    } else {
+      $("#notification").hide();
+    }
   } else {
     console.log("Card data not found or is not an array.");
   }
-
 });
   </script>
   </body>

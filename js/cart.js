@@ -278,3 +278,19 @@ $(document).ready(function() {
   });
 
 });
+
+
+$(document).ready(function() {
+  const cardData = JSON.parse(localStorage.getItem("cardData"));
+
+  if (cardData && Array.isArray(cardData)) {
+    const itemCount = cardData.length;
+    if (itemCount > 0) {
+      $("#notification").text(itemCount);
+    } else {
+      $("#notification").hide();
+    }
+  } else {
+    console.log("Card data not found or is not an array.");
+  }
+});
