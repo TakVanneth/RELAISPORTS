@@ -84,6 +84,7 @@ $(document).ready(function() {
     updateTotalPrice();
   } else {
     // alert("No card data found in localStorage.");
+    
   }
 
   $(".remove_this_product").click(function() {
@@ -293,4 +294,14 @@ $(document).ready(function() {
   } else {
     console.log("Card data not found or is not an array.");
   }
+});
+
+// document.addEventListener('keydown', function (event) {
+//   if (event.key === "Enter") {
+//     $('#open-popup').click();
+//   }
+// });
+$(document).on('keydown', function (event) {
+  if (event.key === "Enter")
+      $('#open-popup').click();
 });

@@ -1152,5 +1152,21 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    $(document).ready(function() {
+  const cardData = JSON.parse(localStorage.getItem("cardData"));
+
+  if (cardData && Array.isArray(cardData)) {
+    const itemCount = cardData.length;
+    if (itemCount > 0) {
+      $("#notification").text(itemCount);
+    } else {
+      $("#notification").hide();
+    }
+  } else {
+    console.log("Card data not found or is not an array.");
+  }
+});
+  </script>
   </body>
   </html>
